@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zexun·Server|极讯·服务器</title>
+</head>
+<style>
+.ui{
+    text-align: center;
+}
+.ui h1{
+    color: rgb(0, 0, 162);
+}
+/* Variation of work by @mrhyddenn for Radios */
+
+
+.check {
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+}
+
+.check:before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(34, 50, 84, 0.03);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.check svg {
+  position: relative;
+  z-index: 1;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #c8ccd4;
+  stroke-width: 1.5;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+}
+
+.check svg path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+}
+
+.check svg polyline {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 66;
+}
+
+.check:hover:before {
+  opacity: 1;
+}
+
+.check:hover svg {
+  stroke: var(--accent-color, #a3e583);
+}
+
+#cbx2:checked + .check svg {
+  stroke: var(--accent-color, #a3e583);
+}
+
+#cbx2:checked + .check svg path {
+  stroke-dashoffset: 60;
+  transition: all 0.3s linear;
+}
+
+#cbx2:checked + .check svg polyline {
+  stroke-dashoffset: 42;
+  transition: all 0.2s linear;
+  transition-delay: 0.15s;
+}
+.msg{
+    float: right;
+}
+.input {
+ border: none;
+ padding: 1rem;
+ border-radius: 1rem;
+ background: #e8e8e8;
+ box-shadow: 20px 20px 60px #c5c5c5,
+		-20px -20px 60px #ffffff;
+ transition: 0.3s;
+}
+
+.input:focus {
+ outline-color: #e8e8e8;
+ background: #e8e8e8;
+ box-shadow: inset 20px 20px 60px #c5c5c5,
+		inset -20px -20px 60px #ffffff;
+ transition: 0.3s;
+}
+</style>
+<body>
+    <div class="ui">
+        <h1>光之辉煌</h1><br>
+        <div class="msg">
+            <img src="./java.png" width="30px" height="30px"><div class="container">
+                <input type="checkbox" id="cbx2" style="display: none;" checked disabled>
+                <label for="cbx2" class="check">
+                    <svg width="18px" height="18px" viewBox="0 0 18 18">
+                        <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
+                        <polyline points="1 9 7 14 15 4"></polyline>
+                    </svg>
+                </label>
+            </div>
+            <img src="https://pic1.zhimg.com/50/v2-98ecdf37edf959e7feaa96fe6f14d7d9_720w.jpg?source=54b3c3a5" height="30px" width="30px"><div class="container">
+                <input type="checkbox" id="cbx2" style="display: none;" disabled>
+                <label for="cbx2" class="check">
+                    <svg width="18px" height="18px" viewBox="0 0 18 18">
+                        <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
+                        <polyline points="1 9 7 14 15 4"></polyline>
+                    </svg>
+                </label>
+            </div>
+            <img src="./gfrz.png" height="30px" width="30px"><div class="container">
+                <input type="checkbox" id="cbx2" style="display: none;" disabled checked>
+                <label for="cbx2" class="check">
+                    <svg width="18px" height="18px" viewBox="0 0 18 18">
+                        <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
+                        <polyline points="1 9 7 14 15 4"></polyline>
+                    </svg>
+                </label>
+            </div>
+            <img src="./grrz.png" height="30px" width="30px"><div class="container">
+                <input type="checkbox" id="cbx2" style="display: none;" disabled>
+                <label for="cbx2" class="check">
+                    <svg width="18px" height="18px" viewBox="0 0 18 18">
+                        <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
+                        <polyline points="1 9 7 14 15 4"></polyline>
+                    </svg>
+                </label>
+            </div>
+        </div>
+        <input type="text" name="text" class="input" placeholder="Type here..." value="gzhh.aternos.me:27129" disabled><br><br><h4>简介：</h4><br>
+            <style>
+                *{
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                .main{
+                    position: relative;
+                    width: 400px;
+                    height: 250px;
+                    overflow: hidden;
+                    border-radius: 5px;
+                    align-items: center;
+                    left: 30%;
+                    right: 70%;
+                }
+                .item{
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: all 0.5s;
+                    background-size: cover;
+                }
+                .item1{
+                   background-image: url(./img/gzhh-pic.jfif);
+                }
+                .item2{
+                    background-image: url(./java.png);
+                    left: 100%;
+                }
+                .item3{
+                    background-image: url(./img/gzhh-pic.jfif);
+                    left: 200%;
+                }
+                input{
+                    position: relative;
+                    z-index: 100;
+                    /* display: none; */
+                }
+                .select{
+                    position: absolute;
+                    bottom: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 60px;
+                    height: 10px;
+                    z-index: 1;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;         
+                }
+                .select>label{
+                    width: 10px;
+                    height: 10px;
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 50%;
+                    cursor: pointer;
+                    border: 1.5px solid white;
+                }
+                .main input:nth-of-type(1):checked ~ .select label:nth-of-type(1){
+                    background-color: rgb(26, 26, 26);
+                }
+                .main input:nth-of-type(2):checked ~ .select label:nth-of-type(2){
+                    background-color: rgb(26, 26, 26);
+                }
+                .main input:nth-of-type(3):checked ~ .select label:nth-of-type(3){
+                    background-color: rgb(26, 26, 26);
+                }
+                .main input:nth-of-type(1):checked ~ .item{
+                    transform: translateX(0);
+                }
+                .main input:nth-of-type(2):checked ~ .item{
+                    transform: translateX(-100%);
+                }
+                .main input:nth-of-type(3):checked ~ .item{
+                    transform: translateX(-200%);
+                }
+            </style>
+           <!--  底层盒子 -->
+            <div class="main">
+                <!-- 三个单选按钮，先默认选择第一个 -->
+                <input type="radio" name="choose" id="choose1" checked>
+                <input type="radio" name="choose" id="choose2">
+                <input type="radio" name="choose" id="choose3">      
+                <!-- 放三张图片，用背景图片表示 -->
+                <div class="item item1"></div>
+                <div class="item item2"></div>
+                <div class="item item3"></div>
+                <!-- 三个label标签 -->
+                 <span class="select">
+                     <label for="choose1"></label>
+                     <label for="choose2"></label>
+                     <label for="choose3"></label>
+                </span>
+        </div>
+        <style>
+            .coolinput {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: static;
+  max-width: 240px;
+}
+
+.coolinput label.text {
+  font-size: 0.75rem;
+  color: #818CF8;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+
+.coolinput input[type=text].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 2px #818CF8 solid;
+  border-radius: 5px;
+  background: #e8e8e8;
+}
+
+.coolinput input[type=text].input:focus {
+  outline: none;
+}
+textarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        </style>
+        <div class="coolinput">
+            <label for="input" class="text">Name:</label>
+            <textarea placeholder="" name="input" class="input" disabled style="width: 793px; height: 117px;left: 200px">暂无简介</textarea>
+        </div>
+    </div>
+</body>
+</html>
