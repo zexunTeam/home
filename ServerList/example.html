@@ -102,13 +102,108 @@
 		inset -20px -20px 60px #ffffff;
  transition: 0.3s;
 }
+.input__container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.664);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 22px;
+  max-width: 300px;
+  transition: transform 400ms;
+  transform-style: preserve-3d;
+  transform: rotateX(15deg) rotateY(-20deg);
+  perspective: 500px;
+}
+
+.shadow__input {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: blur(30px);
+  border-radius: 20px;
+  background-color: #999cff;
+  background-image: radial-gradient(at 85% 51%, hsla(60,60%,61%,1) 0px, transparent 50%),
+    radial-gradient(at 74% 68%, hsla(235,69%,77%,1) 0px, transparent 50%),
+    radial-gradient(at 64% 79%, hsla(284,72%,73%,1) 0px, transparent 50%),
+    radial-gradient(at 75% 16%, hsla(283,60%,72%,1) 0px, transparent 50%),
+    radial-gradient(at 90% 65%, hsla(153,70%,64%,1) 0px, transparent 50%),
+    radial-gradient(at 91% 83%, hsla(283,74%,69%,1) 0px, transparent 50%),
+    radial-gradient(at 72% 91%, hsla(213,75%,75%,1) 0px, transparent 50%);
+}
+
+.input__button__shadow {
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: transform 400ms, background 400ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  padding: 5px;
+}
+
+.input__button__shadow:hover {
+  background: rgba(255, 255, 255, 0.411);
+}
+
+.input__search {
+  width: 100%;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  padding: 8px;
+  position: relative;
+}
+.input-group {
+ position: relative;
+}
+
+.input {
+ border: solid 1.5px #9e9e9e;
+ border-radius: 1rem;
+ background: none;
+ padding: 1rem;
+ font-size: 1rem;
+ color: #f5f5f5;
+ transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.user-label {
+ position: absolute;
+ left: 15px;
+ color: #e8e8e8;
+ pointer-events: none;
+ transform: translateY(1rem);
+ transition: 150ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.input:focus, input:valid {
+ outline: none;
+ border: 1.5px solid #1a73e8;
+}
+
+.input:focus ~ label, input:valid ~ label {
+ transform: translateY(-50%) scale(0.8);
+ background-color: #212121;
+ padding: 0 .2em;
+ color: #2196f3;
+}
 </style>
 <body>
+    <a href="./index.html">返回</a>
     <div class="ui">
-        <h1>服务器标题</h1><br>
+        <h1>服务器名称</h1>[游戏版本]<br>
         <div class="msg">
-            <img src="./img/java.png" width="30px" height="30px"><div class="container">
-                <input type="checkbox" id="cbx2" style="display: none;" checked disabled>
+            <img src="./java.png" width="30px" height="30px"><div class="container">
+                <input type="checkbox" id="cbx2" style="display: none;" disabled>
                 <label for="cbx2" class="check">
                     <svg width="18px" height="18px" viewBox="0 0 18 18">
                         <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
@@ -125,8 +220,8 @@
                     </svg>
                 </label>
             </div>
-            <img src="./img/gfrz.png" height="30px" width="30px"><div class="container">
-                <input type="checkbox" id="cbx2" style="display: none;" disabled checked>
+            <img src="./gfrz.png" height="30px" width="30px"><div class="container">
+                <input type="checkbox" id="cbx2" style="display: none;" disabled>
                 <label for="cbx2" class="check">
                     <svg width="18px" height="18px" viewBox="0 0 18 18">
                         <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
@@ -134,7 +229,7 @@
                     </svg>
                 </label>
             </div>
-            <img src="./img/grrz.png" height="30px" width="30px"><div class="container">
+            <img src="./grrz.png" height="30px" width="30px"><div class="container">
                 <input type="checkbox" id="cbx2" style="display: none;" disabled>
                 <label for="cbx2" class="check">
                     <svg width="18px" height="18px" viewBox="0 0 18 18">
@@ -144,7 +239,7 @@
                 </label>
             </div>
         </div>
-        <input type="text" name="text" class="input" placeholder="Type here..." value="gzhh.aternos.me:27129" disabled><br><br><h4>简介：</h4><br>
+        <input type="text" name="text" class="input" placeholder="Type here..." value="游戏地址" disabled style="color: grey;"><br><br><h4>简介：</h4><br>
             <style>
                 *{
                     margin: 0;
@@ -280,8 +375,8 @@ textarea {
 }
         </style>
         <div class="coolinput">
-            <label for="input" class="text">Name:</label>
-            <textarea placeholder="" name="input" class="input" disabled style="width: 283px; height: 125px;left: 200px">暂无简介</textarea>
+            <label for="input" class="text">简介:</label>
+            <textarea placeholder="" name="input" class="input" disabled style="width: 283; height: 125px;left: 200px;color:grey;"></textarea>
         </div>
     </div>
 </body>
